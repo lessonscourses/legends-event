@@ -11,9 +11,9 @@ const pillars = [
 ]
 
 const stats = [
-  { value: "1,300+", label: "Matchmakings in GCC" },
-  { value: "80+", label: "Private gatherings" },
-  { value: "30+", label: "Countries represented" },
+  { value: "1,300+", label: ["Matchmakings", "in GCC"] },
+  { value: "80+", label: ["Private", "gatherings"] },
+  { value: "30+", label: ["Countries", "represented"] },
 ]
 
 export function AboutLegends() {
@@ -56,9 +56,16 @@ export function AboutLegends() {
         {/* Stats */}
         <Reveal className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
           {stats.map((s) => (
-            <div key={s.label} className="bg-card px-8 py-8">
-              <p className="gold-text text-3xl font-semibold tracking-tight sm:text-4xl">{s.value}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
+            <div
+              key={s.value}
+              className="flex flex-col items-center gap-x-4 gap-y-2 bg-card px-8 py-10 text-center sm:flex-row sm:items-center sm:justify-center sm:text-left"
+            >
+              <p className="gold-text text-4xl font-semibold leading-none tracking-tight sm:text-5xl">{s.value}</p>
+              <p className="text-base font-medium uppercase leading-tight tracking-[0.12em] text-muted-foreground">
+                {s.label[0]}
+                <br />
+                {s.label[1]}
+              </p>
             </div>
           ))}
         </Reveal>
