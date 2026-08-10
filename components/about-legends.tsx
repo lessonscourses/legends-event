@@ -64,7 +64,7 @@ export function AboutLegends() {
         </Reveal>
 
         {/* Final CTA — centered band, no card border, distinct from the stats block above */}
-        <Reveal className="mt-20 flex flex-col items-center gap-7 border-t border-border pt-16 text-center">
+        <Reveal className="mt-20 flex flex-col items-center gap-7 pt-16 text-center">
           <h3 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
             Sessions like this are <span className="gold-text">the way in.</span>
           </h3>
