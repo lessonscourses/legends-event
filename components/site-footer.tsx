@@ -18,8 +18,8 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
-      <div className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col-reverse items-start justify-between gap-4 px-6 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center">
+      <div>
+        <div className="mx-auto flex max-w-6xl flex-col-reverse items-start justify-between gap-4 border-t border-border px-6 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Legends. The session is recorded for internal use.</span>
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 uppercase tracking-[0.14em]">
             {legalLinks.map((link) => (

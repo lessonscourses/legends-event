@@ -1,5 +1,6 @@
 import { ArrowRight, ClipboardList, Mail, Users } from "lucide-react"
 import { ApplyButton } from "./apply-button"
+import { Reveal } from "./reveal"
 
 const assurances = [
   { icon: ClipboardList, label: "Register", desc: "Fill in a short form to request your spot." },
@@ -9,9 +10,9 @@ const assurances = [
 
 export function ApplySection() {
   return (
-    <section id="apply" className="relative overflow-hidden border-t border-border py-24">
+    <section id="apply" className="relative overflow-hidden py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Register</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
             Reserve your spot at the session
@@ -27,19 +28,19 @@ export function ApplySection() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </ApplyButton>
           </div>
-        </div>
+        </Reveal>
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-5 sm:grid-cols-3">
-          {assurances.map((a) => {
+          {assurances.map((a, i) => {
             const Icon = a.icon
             return (
-              <div key={a.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+              <Reveal key={a.label} delay={i * 90} className="rounded-2xl border border-border bg-card p-6 text-center">
                 <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 text-primary">
                   <Icon className="h-5 w-5" />
                 </span>
                 <p className="mt-4 text-sm font-semibold">{a.label}</p>
                 <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
-              </div>
+              </Reveal>
             )
           })}
         </div>

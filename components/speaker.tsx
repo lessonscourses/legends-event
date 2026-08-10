@@ -1,4 +1,5 @@
 import { TrendingUp, Users, Crosshair, Music } from "lucide-react"
+import { Reveal } from "./reveal"
 
 const traits = [
   { icon: TrendingUp, label: "Built", desc: "Backed and built companies from seed to scale." },
@@ -15,24 +16,24 @@ const stats = [
 
 export function Speaker() {
   return (
-    <section id="speaker" className="border-t border-border py-24">
+    <section id="speaker" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">The speaker</p>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* Portrait poster (soft black halo baked into the image) */}
-          <div className="relative">
+          <Reveal className="relative">
             <img
               src="/images/julius-bachmann-poster.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
               className="w-full object-cover"
             />
-          </div>
+          </Reveal>
 
           {/* Bio */}
-          <div className="flex flex-col justify-center">
+          <Reveal delay={120} className="flex flex-col justify-center">
             <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Julius Bachmann</h2>
-            <p className="mt-3 text-sm font-medium uppercase tracking-[0.22em] text-primary">
+            <p className="mt-3 hidden text-sm font-medium uppercase tracking-[0.22em] text-primary sm:block">
               Investor · Operator · Founder · Musician
             </p>
 
@@ -65,18 +66,18 @@ export function Speaker() {
                 )
               })}
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 divide-y divide-border rounded-2xl border border-border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+        <Reveal className="mt-16 grid grid-cols-1 divide-y divide-border rounded-2xl border border-border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {stats.map((s) => (
             <div key={s.label} className="px-8 py-8 text-center">
               <p className="gold-text text-3xl font-semibold tracking-tight sm:text-4xl">{s.value}</p>
               <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

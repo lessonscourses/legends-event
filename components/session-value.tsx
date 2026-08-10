@@ -1,4 +1,5 @@
 import { Compass, Brain, DoorClosed, Check, X } from "lucide-react"
+import { Reveal } from "./reveal"
 
 const agenda = [
   {
@@ -31,9 +32,9 @@ const notForYou = ["Anyone looking to pitch the speaker on the call", "Service p
 
 export function SessionValue() {
   return (
-    <section className="border-t border-border bg-background py-24">
+    <section className="bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Why this room</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
             The decisions that move a company are rarely the financial ones.
@@ -43,15 +44,16 @@ export function SessionValue() {
             In one focused session, Julius unpacks what changes when the founder becomes the bottleneck, and how care
             creates energy in an organisation instead of draining it.
           </p>
-        </div>
+        </Reveal>
 
         {/* Agenda */}
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {agenda.map((a) => {
+          {agenda.map((a, i) => {
             const Icon = a.icon
             return (
-              <div
+              <Reveal
                 key={a.step}
+                delay={i * 90}
                 className="flex flex-col rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/40"
               >
                 <div className="flex items-center justify-between">
@@ -62,14 +64,14 @@ export function SessionValue() {
                 </div>
                 <h3 className="mt-6 text-lg font-semibold">{a.title}</h3>
                 <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">{a.desc}</p>
-              </div>
+              </Reveal>
             )
           })}
         </div>
 
         {/* Who it's for / not for */}
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-8">
+          <Reveal className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Who it&apos;s for</h3>
             <ul className="mt-5 flex flex-col gap-4">
               {forYou.map((item) => (
@@ -79,8 +81,8 @@ export function SessionValue() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="rounded-2xl border border-border bg-background p-8">
+          </Reveal>
+          <Reveal delay={90} className="rounded-2xl border border-border bg-background p-8">
             <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Not for</h3>
             <ul className="mt-5 flex flex-col gap-4">
               {notForYou.map((item) => (
@@ -90,7 +92,7 @@ export function SessionValue() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
