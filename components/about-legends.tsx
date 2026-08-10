@@ -1,5 +1,6 @@
 import { Landmark, Network, Sparkles, Music2, Compass } from "lucide-react"
 import { ApplyButton } from "./apply-button"
+import { Reveal } from "./reveal"
 
 const pillars = [
   { icon: Landmark, label: "Capital" },
@@ -17,14 +18,14 @@ const stats = [
 
 export function AboutLegends() {
   return (
-    <section className="relative overflow-hidden border-t border-border py-24">
+    <section className="relative overflow-hidden py-24">
       <div className="absolute inset-0 -z-10">
         <img src="/images/lounge-network.png" alt="" className="h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">About Legends</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
             The AI-powered private network behind what&apos;s next.
@@ -34,10 +35,10 @@ export function AboutLegends() {
             back each other when things get rough. Sessions like this InvestHack are the way in. Membership opens by
             invitation, to those who take part.
           </p>
-        </div>
+        </Reveal>
 
         {/* Pillars */}
-        <div className="mt-12 flex flex-wrap gap-3">
+        <Reveal className="mt-12 flex flex-wrap gap-3">
           {pillars.map((p) => {
             const Icon = p.icon
             return (
@@ -50,20 +51,20 @@ export function AboutLegends() {
               </span>
             )
           })}
-        </div>
+        </Reveal>
 
         {/* Stats */}
-        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
+        <Reveal className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
           {stats.map((s) => (
             <div key={s.label} className="bg-card px-8 py-8">
               <p className="gold-text text-3xl font-semibold tracking-tight sm:text-4xl">{s.value}</p>
               <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
             </div>
           ))}
-        </div>
+        </Reveal>
 
         {/* Final CTA — centered band, no card border, distinct from the stats block above */}
-        <div className="mt-20 flex flex-col items-center gap-7 border-t border-border pt-16 text-center">
+        <Reveal className="mt-20 flex flex-col items-center gap-7 border-t border-border pt-16 text-center">
           <h3 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
             Sessions like this are <span className="gold-text">the way in.</span>
           </h3>
@@ -73,7 +74,7 @@ export function AboutLegends() {
           <ApplyButton className="mt-1 rounded-full gold-fill px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
             Request Access
           </ApplyButton>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
