@@ -1,0 +1,25 @@
+import { SiteNav } from "@/components/site-nav"
+import { Hero } from "@/components/hero"
+import { SessionValue } from "@/components/session-value"
+import { Speaker } from "@/components/speaker"
+import { ApplySection } from "@/components/apply-section"
+import { AboutLegends } from "@/components/about-legends"
+import { SiteFooter } from "@/components/site-footer"
+import { ApplyModal } from "@/components/apply-modal"
+
+export default function HomePage() {
+  return (
+    <div className="min-h-dvh">
+      <SiteNav />
+      <main>
+        <Hero />
+        <SessionValue />
+        <Speaker />
+        <ApplySection />
+        <AboutLegends />
+      </main>
+      <SiteFooter />
+      <ApplyModal />
+    </div>
+  )
+}
