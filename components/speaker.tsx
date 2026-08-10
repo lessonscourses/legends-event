@@ -33,7 +33,7 @@ export function Speaker() {
           {/* Bio */}
           <Reveal delay={120} className="flex flex-col justify-center">
             <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Julius Bachmann</h2>
-            <p className="mt-3 text-sm font-medium uppercase tracking-[0.22em] text-primary">
+            <p className="mt-3 hidden text-sm font-medium uppercase tracking-[0.22em] text-primary sm:block">
               Investor · Operator · Founder · Musician
             </p>
 
