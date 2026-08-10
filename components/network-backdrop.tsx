@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
-type Node = { x: number; y: number; vx: number; vy: number; r: number };
+type Node = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  r: number;
+};
 
 /**
  * Lightweight animated constellation — a nod to the "network behind what's next".
@@ -12,13 +18,20 @@ export function NetworkBackdrop({ className = "" }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    // Local non-null aliases so closures below keep the narrowed types.
-    const cv = canvas;
-    const context = ctx;
+    const canvasElement = canvasRef.current;
+
+    if (canvasElement === null) {
+      return;
+    }
+
+    const contextElement = canvasElement.getContext("2d");
+
+    if (contextElement === null) {
+      return;
+    }
+
+    const canvas: HTMLCanvasElement = canvasElement;
+    const context: CanvasRenderingContext2D = contextElement;
 
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -28,87 +41,119 @@ export function NetworkBackdrop({ className = "" }: { className?: string }) {
     let height = 0;
     let nodes: Node[] = [];
     let raf = 0;
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const GOLD = "197, 153, 58";
+    const LINK = 150;
 
     function build() {
-      const parent = cv.parentElement;
-      if (!parent) return;
+      const parent = canvas.parentElement;
+
+      if (parent === null) {
+        return;
+      }
+
       width = parent.clientWidth;
       height = parent.clientHeight;
-      cv.width = width * dpr;
-      cv.height = height * dpr;
-      cv.style.width = `${width}px`;
-      cv.style.height = `${height}px`;
+
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const count = Math.min(
         70,
         Math.max(28, Math.round((width * height) / 22000)),
       );
-      nodes = Array.from({ length: count }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.18,
-        vy: (Math.random() - 0.5) * 0.18,
-        r: Math.random() * 1.6 + 0.6,
-      }));
-    }
 
-    const LINK = 150;
+      nodes = Array.from(
+        { length: count },
+        (): Node => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.18,
+          vy: (Math.random() - 0.5) * 0.18,
+          r: Math.random() * 1.6 + 0.6,
+        }),
+      );
+    }
 
     function frame() {
       context.clearRect(0, 0, width, height);
 
-      for (const n of nodes) {
-        n.x += n.vx;
-        n.y += n.vy;
-        if (n.x < 0 || n.x > width) n.vx *= -1;
-        if (n.y < 0 || n.y > height) n.vy *= -1;
+      for (const node of nodes) {
+        node.x += node.vx;
+        node.y += node.vy;
+
+        if (node.x < 0 || node.x > width) {
+          node.vx *= -1;
+        }
+
+        if (node.y < 0 || node.y > height) {
+          node.vy *= -1;
+        }
       }
 
       for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+
+        if (a === undefined) {
+          continue;
+        }
+
         for (let j = i + 1; j < nodes.length; j++) {
-          const a = nodes[i];
           const b = nodes[j];
+
+          if (b === undefined) {
+            continue;
+          }
+
           const dx = a.x - b.x;
           const dy = a.y - b.y;
           const dist = Math.hypot(dx, dy);
+
           if (dist < LINK) {
             const alpha = (1 - dist / LINK) * 0.22;
-            ctx.strokeStyle = `rgba(${GOLD}, ${alpha})`;
-            ctx.lineWidth = 0.6;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
+
+            context.strokeStyle = `rgba(${GOLD}, ${alpha})`;
+
+            context.lineWidth = 0.6;
+
+            context.beginPath();
+            context.moveTo(a.x, a.y);
+            context.lineTo(b.x, b.y);
+            context.stroke();
           }
         }
       }
 
-      for (const n of nodes) {
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${GOLD}, 0.7)`;
-        ctx.fill();
+      for (const node of nodes) {
+        context.beginPath();
+
+        context.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+
+        context.fillStyle = `rgba(${GOLD}, 0.7)`;
+
+        context.fill();
       }
 
-      raf = requestAnimationFrame(frame);
+      if (!prefersReduced) {
+        raf = requestAnimationFrame(frame);
+      }
     }
 
     build();
-    if (prefersReduced) {
-      frame();
-      cancelAnimationFrame(raf);
-    } else {
-      frame();
-    }
+    frame();
 
     const onResize = () => {
       cancelAnimationFrame(raf);
       build();
-      if (!prefersReduced) frame();
+      frame();
     };
+
     window.addEventListener("resize", onResize);
 
     return () => {
@@ -117,5 +162,5 @@ export function NetworkBackdrop({ className = "" }: { className?: string }) {
     };
   }, []);
 
-  return <canvas ref={canvasRef} aria-hidden="true" className={className} />;
+  return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 }
