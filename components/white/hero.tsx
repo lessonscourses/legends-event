@@ -84,15 +84,18 @@ export function Hero() {
           </div>
 
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
-          <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
+          <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_72%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
-              src="/images/julius-bachmann.png"
+              src="/images/speaker-julius.webp"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
-              className="absolute left-1/2 top-1/2 h-[115%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[128%] lg:left-0 lg:-translate-x-[22%]"
+              className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[120%] lg:left-0 lg:-translate-x-[16%]"
             />
           </div>
         </div>
       </div>
+
+      {/* Soft base gradient — dissolves the hard leg crop into the background so the portrait emerges from the screen. Desktop only; mobile uses the portrait mask. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] hidden h-72 bg-gradient-to-t from-background via-background/75 to-transparent lg:block" />
     </section>
   )
 }
