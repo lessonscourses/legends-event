@@ -23,16 +23,20 @@ export function Hero() {
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
-            {/* Kicker: private session + InvestHack identity + online tag */}
-            <span className="block text-xs font-medium uppercase tracking-[0.2em] text-primary">Private session</span>
+            {/* Kicker: online tag + InvestHack identity + speaker (who leads the session) */}
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              <Video className="h-4 w-4" />
+              Online session · closed room
+            </span>
 
             <div className="mt-2">
               <p className="text-2xl font-extrabold tracking-tight sm:text-4xl">
                 <span className="gold-text">InvestHack</span> #02
               </p>
-              <span className="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                <Video className="h-4 w-4 text-primary" />
-                Online · closed room
+              <span className="mt-2 flex items-center gap-2 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
+                Led by
+                <span className="gold-text text-base font-semibold tracking-[0.06em]">Julius Bachmann</span>
               </span>
             </div>
 
