@@ -88,7 +88,7 @@ export function Hero() {
             <img
               src="/images/speaker-julius.webp"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
-              className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[120%] lg:left-0 lg:-translate-x-[16%]"
+              className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[96%] lg:left-0 lg:-translate-x-[6%]"
             />
           </div>
         </div>
