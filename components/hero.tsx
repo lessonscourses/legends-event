@@ -23,23 +23,23 @@ export function Hero() {
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
-            {/* Kicker: simple online tag at top */}
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              <Video className="h-4 w-4" />
+            {/* Group 1: online tag + InvestHack sit tight together */}
+            <span className="inline-flex items-center gap-1.5 text-[0.65rem] font-medium uppercase tracking-[0.22em] text-primary">
+              <Video className="h-3.5 w-3.5" />
               Online
             </span>
-
-            {/* Group 1: online tag + InvestHack sit tight together */}
-            <p className="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-4xl">
+            <p className="mt-0.5 text-2xl font-extrabold tracking-tight sm:text-4xl">
               <span className="gold-text">InvestHack</span> #02
             </p>
 
             {/* Group 2: speaker — pulled close to the H1 below. Stacked for mobile readability. */}
-            <div className="mt-9 flex flex-col gap-0.5">
+            <div className="mt-14 flex flex-col gap-0.5">
               <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
                 Meet the Legend
               </span>
-              <span className="gold-text text-2xl font-semibold tracking-tight sm:text-3xl">Julius Bachmann</span>
+              <span className="gold-text text-[1.65rem] font-semibold tracking-tight sm:text-[2.1rem]">
+                Julius Bachmann
+              </span>
             </div>
 
             {/* Event title — the headline */}
