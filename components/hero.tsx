@@ -28,22 +28,22 @@ export function Hero() {
               <Video className="h-3.5 w-3.5" />
               Online
             </span>
-            <p className="mt-0.5 text-2xl font-extrabold tracking-tight sm:text-4xl">
+            <p className="-mt-0.5 text-2xl font-extrabold tracking-tight sm:text-4xl">
               <span className="gold-text">InvestHack</span> #02
             </p>
 
             {/* Group 2: speaker — pulled close to the H1 below. Stacked for mobile readability. */}
-            <div className="mt-14 flex flex-col gap-0.5">
+            <div className="mt-9 flex flex-col sm:mt-14">
               <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
                 Meet the Legend
               </span>
-              <span className="gold-text text-[1.65rem] font-semibold tracking-tight sm:text-[2.1rem]">
+              <span className="gold-text -mt-0.5 text-[1.4rem] font-semibold tracking-tight sm:text-[2.1rem]">
                 Julius Bachmann
               </span>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-2 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[0.96] tracking-tight">
+            <h1 className="mt-4 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[1.12] tracking-tight">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
