@@ -21,15 +21,13 @@ export function Speaker() {
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">The speaker</p>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          {/* Portrait poster — black background blends into the page; base gradient dissolves the leg crop */}
-          <Reveal className="relative self-center">
+          {/* Portrait quote card — black background blends into the page; raised to sit with the heading */}
+          <Reveal className="relative self-start">
             <img
               src="/images/julius-speaker-quote.webp"
               alt="Julius Bachmann — “Great companies are not built in comfort. They are built by people who learn faster than the world changes.”"
               className="w-full object-contain"
             />
-            {/* Soft base gradient — dissolves the hard bottom crop into the background so he emerges from the screen */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent" />
           </Reveal>
 
           {/* Bio */}
