@@ -24,7 +24,7 @@ export function Hero() {
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Eyebrow — series title as the kicker */}
-            <span className="block text-2xl font-extrabold leading-none tracking-tight sm:text-3xl">
+            <span className="block text-[1.35rem] font-extrabold leading-none tracking-tight sm:text-3xl">
               <span className="gold-text">InvestHack</span> <span className="text-foreground">#02</span>
             </span>
 
