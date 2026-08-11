@@ -1,4 +1,4 @@
-import { CalendarDays, Compass, DoorClosed } from "lucide-react"
+import { CalendarDays, Compass, DoorClosed, Video } from "lucide-react"
 import { Reveal } from "./reveal"
 
 const timeChips = [
@@ -31,20 +31,38 @@ export function EventAgenda() {
         <Reveal className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">How it runs</p>
 
-          {/* Date + timezone strip */}
-          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="inline-flex items-center gap-2.5 text-lg font-semibold tracking-tight sm:text-xl">
-              <CalendarDays className="h-6 w-6 shrink-0 text-primary" />
-              Tuesday, 25 August 2026
+          {/* Date — the anchor, big and clear */}
+          <div className="mt-5 flex items-center gap-3">
+            <CalendarDays className="h-8 w-8 shrink-0 text-primary sm:h-10 sm:w-10" />
+            <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August 2026</span>
+          </div>
+
+          {/* Timezones — clean grid so nothing piles up on mobile */}
+          <div className="mt-6 grid w-full max-w-md grid-cols-3 overflow-hidden rounded-xl border border-border sm:w-auto">
+            {timeChips.map((t, i) => (
+              <div
+                key={t.city}
+                className={`flex flex-col items-center bg-card px-4 py-4 sm:items-start sm:px-6 ${
+                  i > 0 ? "border-l border-border" : ""
+                }`}
+              >
+                <span className="text-lg font-bold leading-none sm:text-2xl">{t.time}</span>
+                <span className="mt-2 text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">{t.city}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Online + the closed-room story */}
+          <div className="mt-6 rounded-xl border border-primary/25 bg-primary/[0.05] p-6">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+              <Video className="h-4 w-4" />
+              Online · closed room
             </span>
-            <span className="flex flex-wrap items-center divide-x divide-border/70 text-sm text-muted-foreground">
-              {timeChips.map((t) => (
-                <span key={t.city} className="px-3 first:pl-0">
-                  <span className="font-semibold text-foreground">{t.time}</span> {t.city}
-                </span>
-              ))}
-              <span className="px-3 uppercase tracking-[0.14em] text-primary">Online</span>
-            </span>
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
+              The entire session runs online, behind closed doors — a small, hand-picked group with cameras on. Direct
+              access to the speaker and the kind of candid, unfiltered conversation that only happens in a room this
+              private.
+            </p>
           </div>
         </Reveal>
 

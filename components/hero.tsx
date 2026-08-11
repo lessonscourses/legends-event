@@ -23,25 +23,28 @@ export function Hero() {
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
-            {/* Kicker: online tag + InvestHack identity + speaker (who leads the session) */}
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              <Video className="h-4 w-4" />
-              Online session · closed room
-            </span>
+            {/* Eyebrow — single kicker line: online format + series, one baseline */}
+            <div className="flex items-center gap-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.2em]">
+              <span className="inline-flex items-center gap-1.5 text-muted-foreground">
+                <Video className="h-3.5 w-3.5 text-primary" />
+                Online
+              </span>
+              <span className="h-3 w-px bg-border" aria-hidden="true" />
+              <span className="gold-text">InvestHack #02</span>
+            </div>
 
-            <div className="mt-2">
-              <p className="text-2xl font-extrabold tracking-tight sm:text-4xl">
-                <span className="gold-text">InvestHack</span> #02
-              </p>
-              <span className="mt-2 flex items-center gap-2 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
+            {/* Speaker — the lead-in to the headline: quiet label, bold name */}
+            <div className="mt-8 flex flex-col gap-1">
+              <span className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Meet the Legend
-                <span className="gold-text text-base font-semibold tracking-[0.06em]">Julius Bachmann</span>
+              </span>
+              <span className="gold-text text-[1.6rem] font-semibold leading-none tracking-tight sm:text-[2.1rem]">
+                Julius Bachmann
               </span>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-4 text-balance text-[clamp(2.9rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight sm:mt-6">
+            <h1 className="mt-5 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[1.12] tracking-tight">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
