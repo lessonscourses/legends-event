@@ -28,8 +28,8 @@ export function Speaker() {
               alt="Julius Bachmann — “Great companies are not built in comfort. They are built by people who learn faster than the world changes.”"
               className="w-full object-contain"
             />
-            {/* Soft base gradient — dissolves the hard waist crop into the background around his belt */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background from-40% via-background/85 via-70% to-transparent" />
+            {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-background from-60% to-transparent" />
           </Reveal>
 
           {/* Bio */}
