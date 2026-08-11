@@ -21,19 +21,21 @@ export function Speaker() {
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">The speaker</p>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          {/* Portrait poster (soft black halo baked into the image) */}
-          <Reveal className="relative">
+          {/* Portrait quote card — enlarged and lowered so his head lands near the role tags; base fade dissolves the waist crop */}
+          <Reveal className="relative self-start lg:mt-24 lg:-mx-8 lg:w-[calc(100%+4rem)]">
             <img
-              src="/images/julius-bachmann-poster.png"
-              alt="Julius Bachmann — VC, CFO, Founder and musician"
-              className="w-full object-cover"
+              src="/images/julius-speaker-quote.webp"
+              alt="Julius Bachmann — “Great companies are not built in comfort. They are built by people who learn faster than the world changes.”"
+              className="w-full object-contain"
             />
+            {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-background from-60% to-transparent" />
           </Reveal>
 
           {/* Bio */}
           <Reveal delay={120} className="flex flex-col justify-center">
             <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Julius Bachmann</h2>
-            <p className="mt-3 hidden text-sm font-medium uppercase tracking-[0.22em] text-primary sm:block">
+            <p className="mt-3 block text-sm font-medium uppercase tracking-[0.22em] text-primary">
               Investor · Operator · Founder · Musician
             </p>
 

@@ -95,7 +95,7 @@ export function Hero() {
       </div>
 
       {/* Soft base gradient — dissolves the hard leg crop into the background so the portrait emerges from the screen. Desktop only; mobile uses the portrait mask. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] hidden h-72 bg-gradient-to-t from-background via-background/75 to-transparent lg:block" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] hidden h-64 bg-gradient-to-t from-background from-55% via-background/90 via-80% to-transparent lg:block" />
     </section>
   )
 }
