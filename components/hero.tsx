@@ -24,12 +24,14 @@ export function Hero() {
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Eyebrow — series title as the loud kicker; the video icon signals the online format */}
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/40 text-primary sm:h-11 sm:w-11">
-                <Video className="h-4 w-4 sm:h-5 sm:w-5" />
+            <div className="flex items-center gap-3.5">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/40 text-primary sm:h-16 sm:w-16">
+                <Video className="h-5 w-5 sm:h-7 sm:w-7" />
                 <span className="sr-only">Online session</span>
               </span>
-              <span className="gold-text text-3xl font-extrabold tracking-tight sm:text-5xl">InvestHack #02</span>
+              <span className="gold-text text-[2.6rem] font-extrabold leading-none tracking-tight sm:text-[4.5rem]">
+                InvestHack #02
+              </span>
             </div>
 
             {/* Speaker — the lead-in to the headline: quiet label, bold name */}
