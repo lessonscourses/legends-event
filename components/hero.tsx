@@ -23,25 +23,27 @@ export function Hero() {
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
-            {/* Kicker: online tag + InvestHack identity + speaker (who leads the session) */}
+            {/* Kicker: simple online tag at top */}
             <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
               <Video className="h-4 w-4" />
-              Online session · closed room
+              Online
             </span>
 
-            <div className="mt-2">
+            <div className="mt-3">
               <p className="text-2xl font-extrabold tracking-tight sm:text-4xl">
                 <span className="gold-text">InvestHack</span> #02
               </p>
-              <span className="mt-2 flex items-center gap-2 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
-                Meet the Legend
-                <span className="gold-text text-base font-semibold tracking-[0.06em]">Julius Bachmann</span>
-              </span>
+              {/* Speaker — who leads the session. Stacked so it stays readable on mobile. */}
+              <div className="mt-4 flex flex-col gap-1">
+                <span className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                  Meet the Legend
+                </span>
+                <span className="gold-text text-xl font-semibold tracking-tight sm:text-2xl">Julius Bachmann</span>
+              </div>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-4 text-balance text-[clamp(2.9rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight sm:mt-6">
+            <h1 className="mt-5 text-balance text-[clamp(3.4rem,6.6vw,5.3rem)] font-bold leading-[0.96] tracking-tight sm:mt-6">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
