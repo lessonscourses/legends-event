@@ -1,6 +1,6 @@
 import { CalendarDays, Video, ArrowRight } from "lucide-react"
-import { NetworkBackdrop } from "./network-backdrop"
-import { ApplyButton } from "./apply-button"
+import { NetworkBackdrop } from "../network-backdrop"
+import { ApplyButton } from "../apply-button"
 
 const timeChips = [
   { city: "Dubai", time: "5:00 PM" },

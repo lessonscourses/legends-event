@@ -1,0 +1,67 @@
+/*
+ * Scoped light ("white") theme for the /white route.
+ *
+ * This file ONLY re-declares the design tokens under the `.legends-white`
+ * wrapper — it is a pure colour inversion of the existing dark landing page.
+ * Nothing here leaks onto the main `/` page: every rule is scoped to
+ * `.legends-white` (or its descendants), so changes made to /white styling
+ * stay isolated to this route.
+ *
+ * Black backgrounds -> #f7f8f9, cream/white text + fills -> black,
+ * gold accents remain EXACTLY the same as the dark version.
+ */
+
+.legends-white {
+  /* Surfaces */
+  --background: #f7f8f9;
+  --foreground: #0b0a09;
+
+  --card: #ffffff;
+  --card-foreground: #0b0a09;
+
+  --muted: #eceef1;
+  --muted-foreground: #5b5f66;
+
+  /* Gold-tinted hairlines — same hue, nudged up so they read on light */
+  --border: rgba(197, 153, 58, 0.3);
+  --input: rgba(11, 10, 9, 0.16);
+  --ring: #c5993a;
+
+  /* Gold — untouched, identical to the dark theme */
+  --primary: #c5993a;
+  --primary-foreground: #0b0a09;
+
+  --accent: #d9b25e;
+  --accent-foreground: #0b0a09;
+
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Selection: dark text on a soft gold wash (dark theme used cream text) */
+.legends-white ::selection {
+  background-color: rgba(197, 153, 58, 0.28);
+  color: #0b0a09;
+}
+
+/* Gold-lit form fields — inverted to sit on a light surface */
+.legends-white .gold-input {
+  border: 1px solid rgba(197, 153, 58, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 24px -16px rgba(197, 153, 58, 0.55);
+}
+.legends-white .gold-input::placeholder {
+  color: rgba(91, 95, 102, 0.7);
+}
+.legends-white .gold-input:hover {
+  border-color: rgba(197, 153, 58, 0.6);
+}
+.legends-white .gold-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(197, 153, 58, 0.2),
+    0 0 26px -6px rgba(217, 178, 94, 0.4),
+    inset 0 1px 20px -16px rgba(197, 153, 58, 0.5);
+}
