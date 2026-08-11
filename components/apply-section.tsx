@@ -30,6 +30,15 @@ export function ApplySection() {
           </div>
         </Reveal>
 
+        <Reveal delay={120} className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border bg-card p-7 text-left sm:p-8">
+          <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Before you register</h3>
+          <p className="mt-4 text-pretty text-sm leading-relaxed text-muted-foreground">
+            Registration does not guarantee a seat. Each request is reviewed individually. The session is capped, and
+            final composition locks 24 hours before the event. The session is recorded for internal use — by
+            registering you consent to recording.
+          </p>
+        </Reveal>
+
         <div className="mx-auto mt-14 grid max-w-4xl gap-5 sm:grid-cols-3">
           {assurances.map((a, i) => {
             const Icon = a.icon

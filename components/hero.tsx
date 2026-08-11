@@ -35,7 +35,7 @@ export function Hero() {
               </p>
               <span className="mt-2 flex items-center gap-2 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
                 <span className="h-px w-6 bg-primary/60" aria-hidden="true" />
-                Led by
+                Meet the Legend
                 <span className="gold-text text-base font-semibold tracking-[0.06em]">Julius Bachmann</span>
               </span>
             </div>
@@ -44,7 +44,7 @@ export function Hero() {
             <h1 className="mt-4 text-balance text-[clamp(2.9rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight sm:mt-6">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
-            <p className="mt-4 max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:text-xl">
+            <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
               The capital they create — a closed session where boardroom strategy and personal leadership meet.
             </p>
 
