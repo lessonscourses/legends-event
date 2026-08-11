@@ -24,8 +24,8 @@ export function Hero() {
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Eyebrow — series title as the kicker */}
-            <span className="gold-text block text-3xl font-extrabold leading-none tracking-tight sm:text-4xl">
-              InvestHack #02
+            <span className="block text-2xl font-extrabold leading-none tracking-tight sm:text-3xl">
+              <span className="gold-text">InvestHack</span> <span className="text-foreground">#02</span>
             </span>
 
             {/* Speaker — the lead-in to the headline: quiet label, bold name */}
@@ -33,7 +33,7 @@ export function Hero() {
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Meet the Legend
               </span>
-              <span className="gold-text text-[1.6rem] font-semibold leading-none tracking-tight sm:text-[2.1rem]">
+              <span className="gold-text text-[1.84rem] font-semibold leading-none tracking-tight sm:text-[2.42rem]">
                 Julius Bachmann
               </span>
             </div>
@@ -48,9 +48,15 @@ export function Hero() {
 
             {/* Event date + city times */}
             <div className="mt-16 flex flex-col gap-4 sm:mt-9">
-              <div className="inline-flex items-center gap-3">
-                <CalendarDays className="h-7 w-7 shrink-0 text-primary sm:h-9 sm:w-9" />
-                <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+                <div className="inline-flex items-center gap-3">
+                  <CalendarDays className="h-7 w-7 shrink-0 text-primary sm:h-9 sm:w-9" />
+                  <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
+                </div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  <Video className="h-4 w-4 shrink-0" />
+                  Online
+                </span>
               </div>
 
               <div className="flex flex-wrap items-center divide-x divide-border/70">
