@@ -29,21 +29,21 @@ export function Hero() {
               Online
             </span>
 
-            <div className="mt-3">
-              <p className="text-2xl font-extrabold tracking-tight sm:text-4xl">
-                <span className="gold-text">InvestHack</span> #02
-              </p>
-              {/* Speaker — who leads the session. Stacked so it stays readable on mobile. */}
-              <div className="mt-4 flex flex-col gap-1">
-                <span className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                  Meet the Legend
-                </span>
-                <span className="gold-text text-xl font-semibold tracking-tight sm:text-2xl">Julius Bachmann</span>
-              </div>
+            {/* Group 1: online tag + InvestHack sit tight together */}
+            <p className="mt-1.5 text-2xl font-extrabold tracking-tight sm:text-4xl">
+              <span className="gold-text">InvestHack</span> #02
+            </p>
+
+            {/* Group 2: speaker — pulled close to the H1 below. Stacked for mobile readability. */}
+            <div className="mt-9 flex flex-col gap-0.5">
+              <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                Meet the Legend
+              </span>
+              <span className="gold-text text-2xl font-semibold tracking-tight sm:text-3xl">Julius Bachmann</span>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-5 text-balance text-[clamp(3.4rem,6.6vw,5.3rem)] font-bold leading-[0.96] tracking-tight sm:mt-6">
+            <h1 className="mt-2 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[0.96] tracking-tight">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
