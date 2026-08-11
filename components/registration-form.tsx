@@ -22,8 +22,6 @@ type FormState = {
   role: string
   revenue: string
   linkedin: string
-  needs: string
-  referrer: string
   consent: boolean
 }
 
@@ -35,8 +33,6 @@ const initial: FormState = {
   role: "",
   revenue: "",
   linkedin: "",
-  needs: "",
-  referrer: "",
   consent: false,
 }
 
@@ -125,23 +121,6 @@ export function RegistrationForm() {
             placeholder="https://linkedin.com/in/..."
             className={inputClass}
           />
-        </Field>
-        <Field
-          label="What would be the most valuable outcome of your networking right now?"
-          required
-          className="sm:col-span-2"
-        >
-          <textarea
-            required
-            rows={4}
-            value={form.needs}
-            onChange={update("needs")}
-            placeholder="Be specific — the match you need most right now (a partner, investor, customer or deal) and what would make it valuable."
-            className={`${inputClass} resize-none`}
-          />
-        </Field>
-        <Field label="Who referred you?" optional className="sm:col-span-2">
-          <input value={form.referrer} onChange={update("referrer")} placeholder="Member or partner name" className={inputClass} />
         </Field>
       </div>
 

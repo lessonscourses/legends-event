@@ -23,14 +23,13 @@ export function Hero() {
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
-            {/* Eyebrow — single kicker line: online format + series, one baseline */}
-            <div className="flex items-center gap-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.2em]">
-              <span className="inline-flex items-center gap-1.5 text-muted-foreground">
-                <Video className="h-3.5 w-3.5 text-primary" />
-                Online
+            {/* Eyebrow — series title as the loud kicker; the video icon signals the online format */}
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/40 text-primary sm:h-11 sm:w-11">
+                <Video className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="sr-only">Online session</span>
               </span>
-              <span className="h-3 w-px bg-border" aria-hidden="true" />
-              <span className="gold-text">InvestHack #02</span>
+              <span className="gold-text text-3xl font-extrabold tracking-tight sm:text-5xl">InvestHack #02</span>
             </div>
 
             {/* Speaker — the lead-in to the headline: quiet label, bold name */}
