@@ -10,7 +10,7 @@ const timeChips = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="on-dark relative overflow-hidden bg-background">
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0 -z-10">
         <img src="/images/lounge-dubai.png" alt="" className="h-full w-full object-cover object-center opacity-20" />
@@ -19,7 +19,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 pb-24 pt-32 lg:pb-28 lg:pt-40">
+      <div className="mx-auto max-w-6xl px-6 pb-48 pt-32 lg:pb-60 lg:pt-40">
         <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
@@ -39,8 +39,9 @@ export function Hero() {
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-5 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[1.12] tracking-tight">
-              Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
+            <h1 className="mt-5 text-balance text-[clamp(1.9rem,4.2vw,3.3rem)] font-bold leading-[1.15] tracking-tight">
+              How to Build Ownership Culture <span className="text-muted-foreground">&amp;</span> Care: Insights from
+              200+ Scale-Up Companies
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
               The capital they create — a closed session where boardroom strategy and personal leadership meet.
@@ -94,8 +95,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Soft base gradient — dissolves the hard leg crop into the background so the portrait emerges from the screen. Desktop only; mobile uses the portrait mask. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] hidden h-64 bg-gradient-to-t from-background from-55% via-background/90 via-80% to-transparent lg:block" />
+      {/* Leg fade — darkens the cropped legs into pure black, exactly like the dark theme, so the portrait emerges from the black instead of showing a hard crop. Desktop only; mobile uses the portrait mask. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] hidden h-72 bg-gradient-to-t from-background from-55% via-background/90 via-80% to-transparent lg:block" />
+
+      {/* Soft base gradient — dissolves the black hero down into the light base grey where the section ends, so the black softly disperses into the page. */}
+      <div className="hero-base-fade pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-64 lg:h-72" />
     </section>
   )
 }

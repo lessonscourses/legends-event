@@ -44,6 +44,55 @@
   color: #0b0a09;
 }
 
+/* --- Dark zones inside the light theme ---
+ * The hero (top) and the AboutLegends + footer band (bottom) are rendered on
+ * black. `.on-dark` flips the palette back to the dark brand tokens so every
+ * descendant (text, cards, hairlines) reads correctly on black, while the
+ * gold accents stay identical. */
+.legends-white .on-dark {
+  --background: #000000;
+  --foreground: #f5f2ed;
+
+  --card: #0b0a09;
+  --card-foreground: #f5f2ed;
+
+  --muted: #141210;
+  --muted-foreground: #9b968c;
+
+  --border: rgba(197, 153, 58, 0.14);
+  --input: rgba(245, 242, 237, 0.12);
+
+  color: var(--foreground);
+}
+
+/* Solid black backdrop for a dark zone */
+.legends-white .dark-zone {
+  background-color: #000000;
+}
+
+/* Bottom edge of the hero dissolves down into the light base grey */
+.legends-white .hero-base-fade {
+  background: linear-gradient(
+    to top,
+    #f7f8f9 0%,
+    rgba(247, 248, 249, 0.86) 30%,
+    rgba(247, 248, 249, 0) 100%
+  );
+}
+
+/* Transition strip that dissolves the light base grey down into the bottom
+ * dark zone (sits above the AboutLegends content, never over the text) */
+.legends-white .dark-zone-top-fade {
+  background: linear-gradient(
+    to bottom,
+    #f7f8f9 0%,
+    #f7f8f9 18%,
+    rgba(247, 248, 249, 0.72) 46%,
+    rgba(247, 248, 249, 0.3) 74%,
+    rgba(247, 248, 249, 0) 100%
+  );
+}
+
 /* Gold-lit form fields — inverted to sit on a light surface */
 .legends-white .gold-input {
   border: 1px solid rgba(197, 153, 58, 0.4);
