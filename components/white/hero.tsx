@@ -27,7 +27,7 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-6 pb-48 pt-32 lg:pb-60 lg:pt-40">
-        <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-5">
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Eyebrow — series title as the kicker */}

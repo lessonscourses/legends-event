@@ -24,7 +24,7 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-32 lg:pb-28 lg:pt-40">
-        <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-5">
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Eyebrow — series title as the kicker */}
@@ -46,8 +46,8 @@ export function Hero() {
             {/* Event title — the headline */}
             <h1 className="mt-5 text-balance text-[clamp(1.9rem,4.2vw,3.3rem)] font-bold leading-[1.15] tracking-tight">
               How to Build Ownership Culture{" "}
-              <span className="text-muted-foreground">&amp;</span> Care: Insights
-              from 200+ Scale-Up Companies
+              <span className="text-muted-foreground">&amp;</span> Care:
+              Insights from 200+ Scale-Up Companies
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
               The capital they create — a closed session where boardroom
