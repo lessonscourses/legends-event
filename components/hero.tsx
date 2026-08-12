@@ -44,10 +44,10 @@ export function Hero() {
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-5 text-balance text-[clamp(2.9rem,6.6vw,5.3rem)] font-bold leading-[1.12] tracking-tight">
-              How to apply Ownership Culture & Care:{" "}
-              <span className="text-muted-foreground">&amp;</span> 200+ Scale-Up
-              CEOs & What Actually Works
+            <h1 className="mt-5 text-balance text-[clamp(1.9rem,4.2vw,3.3rem)] font-bold leading-[1.15] tracking-tight">
+              How to Build Ownership Culture{" "}
+              <span className="text-muted-foreground">&amp;</span> Care: Insights
+              from 200+ Scale-Up Companies
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
               The capital they create — a closed session where boardroom
