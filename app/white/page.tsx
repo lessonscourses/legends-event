@@ -21,7 +21,7 @@ export default function WhitePage() {
         <ApplySection />
         <div className="on-dark dark-zone relative">
           {/* Transition strip: light base grey disperses down into the black zone, above the content */}
-          <div aria-hidden className="dark-zone-top-fade h-40 sm:h-56" />
+          <div aria-hidden className="dark-zone-top-fade h-64 sm:h-80" />
           <AboutLegends />
         </div>
       </main>

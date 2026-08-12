@@ -86,7 +86,9 @@
   background: linear-gradient(
     to bottom,
     #f7f8f9 0%,
-    rgba(247, 248, 249, 0.75) 28%,
+    #f7f8f9 18%,
+    rgba(247, 248, 249, 0.72) 46%,
+    rgba(247, 248, 249, 0.3) 74%,
     rgba(247, 248, 249, 0) 100%
   );
 }
