@@ -95,6 +95,9 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Leg fade — darkens the cropped legs into pure black, exactly like the dark theme, so the portrait emerges from the black instead of showing a hard crop. Desktop only; mobile uses the portrait mask. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] hidden h-72 bg-gradient-to-t from-background from-55% via-background/90 via-80% to-transparent lg:block" />
+
       {/* Soft base gradient — dissolves the black hero down into the light base grey where the section ends, so the black softly disperses into the page. */}
       <div className="hero-base-fade pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-64 lg:h-72" />
     </section>
