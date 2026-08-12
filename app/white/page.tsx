@@ -19,9 +19,15 @@ export default function WhitePage() {
         <EventAgenda />
         <Speaker />
         <ApplySection />
-        <AboutLegends />
+        <div className="on-dark dark-zone relative">
+          {/* Transition strip: light base grey disperses down into the black zone, above the content */}
+          <div aria-hidden className="dark-zone-top-fade h-40 sm:h-56" />
+          <AboutLegends />
+        </div>
       </main>
-      <SiteFooter />
+      <div className="on-dark dark-zone">
+        <SiteFooter />
+      </div>
       <ApplyModal />
     </div>
   )

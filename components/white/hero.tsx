@@ -10,7 +10,7 @@ const timeChips = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="on-dark relative overflow-hidden bg-background">
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0 -z-10">
         <img src="/images/lounge-dubai.png" alt="" className="h-full w-full object-cover object-center opacity-20" />
@@ -95,8 +95,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Soft base gradient — dissolves the hard leg crop into the background so the portrait emerges from the screen. Desktop only; mobile uses the portrait mask. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] hidden h-64 bg-gradient-to-t from-background from-55% via-background/90 via-80% to-transparent lg:block" />
+      {/* Soft base gradient — dissolves the black hero down into the light base grey where the section ends, so the black softly disperses into the page. */}
+      <div className="hero-base-fade pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-64 lg:h-72" />
     </section>
   )
 }
