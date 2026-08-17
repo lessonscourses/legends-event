@@ -5,7 +5,7 @@ import { X } from "lucide-react"
 import { RegistrationForm } from "./registration-form"
 import { APPLY_EVENT } from "./apply-button"
 
-export function ApplyModal() {
+export function ApplyModal({ sendWhatsApp = false }: { sendWhatsApp?: boolean }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export function ApplyModal() {
           </p>
         </div>
 
-        <RegistrationForm />
+        <RegistrationForm sendWhatsApp={sendWhatsApp} />
       </div>
     </div>
   )

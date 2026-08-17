@@ -21,7 +21,7 @@ export default function HomePage() {
         <AboutLegends />
       </main>
       <SiteFooter />
-      <ApplyModal />
+      <ApplyModal sendWhatsApp />
     </div>
   )
 }

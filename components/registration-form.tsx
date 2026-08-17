@@ -36,7 +36,7 @@ const initial: FormState = {
   consent: false,
 }
 
-export function RegistrationForm() {
+export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle")
   const [form, setForm] = useState<FormState>(initial)
 
@@ -52,7 +52,21 @@ export function RegistrationForm() {
     e.preventDefault()
     if (status === "loading") return
     setStatus("loading")
-    await new Promise((r) => setTimeout(r, 900))
+
+    if (sendWhatsApp) {
+      try {
+        await fetch("/api/apply", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        })
+      } catch (err) {
+        console.log("[v0] apply request failed:", err)
+      }
+    } else {
+      await new Promise((r) => setTimeout(r, 900))
+    }
+
     setStatus("done")
   }
 
