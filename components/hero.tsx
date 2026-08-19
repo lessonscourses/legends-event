@@ -8,7 +8,7 @@ const timeChips = [
   { city: "New York", time: "9:00 AM" },
 ];
 
-export function Hero() {
+export function Hero({ postEvent = false }: { postEvent?: boolean }) {
   return (
     <section id="top" className="relative overflow-hidden">
       {/* Atmospheric backdrop */}
@@ -84,10 +84,20 @@ export function Hero() {
             </div>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <ApplyButton className="group inline-flex items-center gap-2 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
-                Apply to Join
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </ApplyButton>
+              {postEvent ? (
+                <a
+                  href="#recap"
+                  className="group inline-flex items-center gap-2 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Watch the recap
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              ) : (
+                <ApplyButton className="group inline-flex items-center gap-2 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+                  Apply to Join
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </ApplyButton>
+              )}
               <a
                 href="#speaker"
                 className="rounded-full border border-border px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
