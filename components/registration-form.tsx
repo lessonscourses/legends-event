@@ -11,6 +11,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}`
 
 type FormState = {
   fullName: string
+  email: string
   phone: string
   linkedin: string
   consent: boolean
@@ -18,6 +19,7 @@ type FormState = {
 
 const initial: FormState = {
   fullName: "",
+  email: "",
   phone: "",
   linkedin: "",
   consent: false,
@@ -76,7 +78,7 @@ export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: bool
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full gold-fill px-6 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
             <MessageCircle className="h-4 w-4" /> Join us on WhatsApp
           </a>
@@ -90,6 +92,9 @@ export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: bool
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Full name" required className="sm:col-span-2">
           <input required value={form.fullName} onChange={update("fullName")} placeholder="Your full name" className={inputClass} />
+        </Field>
+        <Field label="Email" required className="sm:col-span-2">
+          <input required type="email" value={form.email} onChange={update("email")} placeholder="you@example.com" className={inputClass} />
         </Field>
         <Field label="Phone (with country code)" required className="sm:col-span-2">
           <input required type="tel" value={form.phone} onChange={update("phone")} placeholder="+971 50 000 0000" className={inputClass} />
