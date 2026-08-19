@@ -16,7 +16,7 @@ const stats = [
   { value: "30+", label: ["Countries", "represented"] },
 ]
 
-export function AboutLegends() {
+export function AboutLegends({ postEvent = false }: { postEvent?: boolean }) {
   return (
     <section className="relative overflow-hidden py-24">
       <div className="absolute inset-0 -z-10">
@@ -71,17 +71,19 @@ export function AboutLegends() {
         </Reveal>
 
         {/* Final CTA — centered band, no card border, distinct from the stats block above */}
-        <Reveal className="mt-20 flex flex-col items-center gap-7 pt-16 text-center">
-          <h3 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Sessions like this are <span className="gold-text">the way in.</span>
-          </h3>
-          <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
-            Seats are capped and reviewed personally. The final list locks 24 hours before.
-          </p>
-          <ApplyButton className="mt-1 rounded-full gold-fill px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
-            Request Access
-          </ApplyButton>
-        </Reveal>
+        {!postEvent && (
+          <Reveal className="mt-20 flex flex-col items-center gap-7 pt-16 text-center">
+            <h3 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Sessions like this are <span className="gold-text">the way in.</span>
+            </h3>
+            <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
+              Seats are capped and reviewed personally. The final list locks 24 hours before.
+            </p>
+            <ApplyButton className="mt-1 rounded-full gold-fill px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+              Request Access
+            </ApplyButton>
+          </Reveal>
+        )}
       </div>
     </section>
   )

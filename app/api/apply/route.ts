@@ -6,9 +6,6 @@ type ApplyPayload = {
   fullName?: string
   email?: string
   phone?: string
-  company?: string
-  role?: string
-  revenue?: string
   linkedin?: string
   consent?: boolean
 }
@@ -102,11 +99,8 @@ export async function POST(req: NextRequest) {
   const ownerText =
     `🔔 New Legends application\n\n` +
     `Name: ${fullName || "—"}\n` +
-    `Email: ${data.email || "—"}\n` +
+    `Email: ${(data.email || "—").trim()}\n` +
     `Phone: ${applicantPhone || "—"}\n` +
-    `Company: ${data.company || "—"}\n` +
-    `Role: ${data.role || "—"}\n` +
-    `Revenue: ${data.revenue || "—"}\n` +
     `LinkedIn: ${data.linkedin || "—"}\n` +
     `Consent: ${data.consent ? "yes" : "no"}`
 
