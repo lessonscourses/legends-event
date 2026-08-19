@@ -1,37 +1,24 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Loader2, ChevronDown } from "lucide-react"
+import { Check, Loader2, MessageCircle } from "lucide-react"
 
-const roles = [
-  "Founder / Co-founder",
-  "CEO / Managing Partner",
-  "Owner / Shareholder",
-  "C-level Executive",
-  "Investor / Board",
-  "Other",
-]
-
-const revenues = ["Under $1M", "$1–10M", "$10–50M", "$50–100M", "$100M+"]
+// TODO: подставь реальный номер WhatsApp-канала (в международном формате, только цифры).
+// Например для +971 50 000 0000 -> "971500000000". Ссылка вида https://wa.me/<номер>.
+// Можно вынести в NEXT_PUBLIC_WHATSAPP_PHONE и заменить строку ниже на process.env.NEXT_PUBLIC_WHATSAPP_PHONE.
+const WHATSAPP_PHONE = "971500000000"
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}`
 
 type FormState = {
   fullName: string
-  email: string
   phone: string
-  company: string
-  role: string
-  revenue: string
   linkedin: string
   consent: boolean
 }
 
 const initial: FormState = {
   fullName: "",
-  email: "",
   phone: "",
-  company: "",
-  role: "",
-  revenue: "",
   linkedin: "",
   consent: false,
 }
@@ -78,9 +65,22 @@ export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: bool
         </span>
         <h3 className="text-2xl font-semibold">Application submitted</h3>
         <p className="text-pretty leading-relaxed text-muted-foreground">
-          We&apos;ll review your application and be in touch within 72 hours. Seats are capped and every request is
-          reviewed personally — watch <span className="text-foreground">{form.email || "your inbox"}</span>.
+          Thanks — we&apos;ve received your application and our team will be in touch with you shortly.
         </p>
+
+        <div className="mt-2 w-full rounded-2xl border border-border/60 bg-card/40 p-5">
+          <p className="text-pretty leading-relaxed text-muted-foreground">
+            Want to get ahead? Join us and ask your questions directly in our WhatsApp channel.
+          </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full gold-fill px-6 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            <MessageCircle className="h-4 w-4" /> Join us on WhatsApp
+          </a>
+        </div>
       </div>
     )
   }
@@ -91,44 +91,11 @@ export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: bool
         <Field label="Full name" required className="sm:col-span-2">
           <input required value={form.fullName} onChange={update("fullName")} placeholder="Your full name" className={inputClass} />
         </Field>
-        <Field label="Email" required>
-          <input required type="email" value={form.email} onChange={update("email")} placeholder="you@company.com" className={inputClass} />
-        </Field>
-        <Field label="Phone (with country code)" required>
+        <Field label="Phone (with country code)" required className="sm:col-span-2">
           <input required type="tel" value={form.phone} onChange={update("phone")} placeholder="+971 50 000 0000" className={inputClass} />
         </Field>
-        <Field label="Company name" required className="sm:col-span-2">
+        <Field label="LinkedIn URL" optional className="sm:col-span-2">
           <input
-            required
-            value={form.company}
-            onChange={update("company")}
-            placeholder="Company you are most actively involved in"
-            className={inputClass}
-          />
-        </Field>
-        <Field label="Role" required>
-          <Select value={form.role} onChange={update("role")}>
-            <option value="">Select…</option>
-            {roles.map((r) => (
-              <option key={r} value={r} className="bg-card text-foreground">
-                {r}
-              </option>
-            ))}
-          </Select>
-        </Field>
-        <Field label="Company annual revenue" required help="Revenue of the company you operate — not personal income.">
-          <Select value={form.revenue} onChange={update("revenue")}>
-            <option value="">Select…</option>
-            {revenues.map((r) => (
-              <option key={r} value={r} className="bg-card text-foreground">
-                {r}
-              </option>
-            ))}
-          </Select>
-        </Field>
-        <Field label="LinkedIn URL" required className="sm:col-span-2">
-          <input
-            required
             type="url"
             value={form.linkedin}
             onChange={update("linkedin")}
@@ -181,25 +148,6 @@ export function RegistrationForm({ sendWhatsApp = false }: { sendWhatsApp?: bool
 
 const inputClass =
   "gold-input w-full rounded-xl px-4 py-3 text-sm text-foreground outline-none"
-
-function Select({
-  value,
-  onChange,
-  children,
-}: {
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
-  children: React.ReactNode
-}) {
-  return (
-    <div className="relative">
-      <select required value={value} onChange={onChange} className={`${inputClass} appearance-none pr-10`}>
-        {children}
-      </select>
-      <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-primary" strokeWidth={2.4} />
-    </div>
-  )
-}
 
 function Field({
   label,
