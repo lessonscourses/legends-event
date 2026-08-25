@@ -46,7 +46,7 @@ export function Hero({ postEvent = false }: { postEvent?: boolean }) {
             {/* Event title — the headline */}
             <h1 className="mt-5 text-balance text-[clamp(1.9rem,4.2vw,3.3rem)] font-bold leading-[1.15] tracking-tight">
               How to Build One Business From Hundreds of{" "}
-              <span className="text-muted-foreground">Independent Minds?</span>
+              <span className="text-foreground">Independent Minds?</span>
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
               The trust that turns independent experts into one firm — a closed
