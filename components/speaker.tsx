@@ -1,17 +1,17 @@
-import { TrendingUp, Users, Crosshair, Music } from "lucide-react"
+import { TrendingUp, Users, Crosshair, Globe } from "lucide-react"
 import { Reveal } from "./reveal"
 
 const traits = [
-  { icon: TrendingUp, label: "Built", desc: "Backed and built companies from seed to scale." },
-  { icon: Users, label: "Transformed", desc: "Moved from corporate structures to creative freedom." },
-  { icon: Crosshair, label: "Advises", desc: "PE/VC partners and CEOs on their hardest calls." },
-  { icon: Music, label: "Inspired", desc: "Music shapes how he thinks, leads and creates." },
+  { icon: TrendingUp, label: "Built", desc: "Founded and scaled a distributed consulting firm from the ground up." },
+  { icon: Users, label: "Led", desc: "Established and led Operations Consulting at PwC and Protiviti." },
+  { icon: Crosshair, label: "Connects", desc: "Pairs organisations with senior independent experts." },
+  { icon: Globe, label: "Expands", desc: "Growing from networks into ecosystems, communities and ventures." },
 ]
 
 const stats = [
-  { value: "200+", label: "Companies financed & advised" },
-  { value: "100 → 1,000", label: "Scaling board experience" },
-  { value: "6,500+", label: "Leaders read Wise Systems" },
+  { value: "~10 yrs", label: "Building & evolving Konsälidön" },
+  { value: "3 firms", label: "Consulting practices built & led" },
+  { value: "1 network", label: "Independent minds, one company" },
 ]
 
 export function Speaker() {
@@ -25,7 +25,7 @@ export function Speaker() {
           <Reveal className="relative self-start lg:mt-24 lg:-mx-8 lg:w-[calc(100%+4rem)]">
             <img
               src="/images/julius-speaker-quote.webp"
-              alt="Julius Bachmann — “Great companies are not built in comfort. They are built by people who learn faster than the world changes.”"
+              alt="Varun Malik — Founder and CEO of Konsälidön"
               className="w-full object-contain"
             />
             {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
@@ -34,25 +34,27 @@ export function Speaker() {
 
           {/* Bio */}
           <Reveal delay={120} className="flex flex-col justify-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Julius Bachmann</h2>
+            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Varun Malik</h2>
             <p className="mt-3 block text-sm font-medium uppercase tracking-[0.22em] text-primary">
-              Investor · Operator · Founder · Musician
+              Founder · CEO · Operator · Ecosystem Builder
             </p>
 
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Before he became the advisor CEOs call in their hardest moments, Julius sat on the other side of the
-              table — first as a PE/VC investor, then as a tech-company CFO. He knows cap tables, boardrooms and the
-              pressure of the numbers from the inside. Over more than a decade he has financed and advised{" "}
-              <span className="text-foreground">200+ companies</span> through their most consequential calls.
+              Varun Malik is the Founder and CEO of{" "}
+              <span className="text-foreground">Konsälidön</span>, a Dubai-based distributed consulting company
+              connecting organisations with consulting teams and independent senior talent. Before founding it, he
+              established and led an Operations Consulting team at PwC, built a consulting practice at Protiviti and
+              managed operations consulting projects at Encreate Consulting.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              He is also an author and musician. He writes the Wise Systems newsletter — on how we stay human while
-              building what matters — read by 6,500+ leaders, and has published essays in Forbes, Sifted, Capital and
-              Business Insider. He holds an MBA from London Business School.
+              He has also built technology and learning ventures in India. Nearly a decade on, his work is expanding
+              from consulting networks towards a broader model built around ecosystems, communities and long-term
+              collaboration.
             </p>
 
             <blockquote className="mt-8 border-l-2 border-primary pl-5 text-pretty text-lg italic leading-relaxed text-foreground">
-              &ldquo;The highest-leverage decisions are the ones you cannot delegate.&rdquo;
+              &ldquo;What comes next will be built on new models — with wider reach, faster sensing, and closer to the
+              people doing the work.&rdquo;
             </blockquote>
 
             {/* Traits */}

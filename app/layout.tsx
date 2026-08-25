@@ -10,13 +10,13 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: "InvestHack #03 — Julius Bachmann · Legends",
+  title: "InvestHack #03 — Varun Malik · Legends",
   description:
-    "Ownership, Culture and Care: The Capital They Create. A private online session with Julius Bachmann — VC, CFO, Founder. By invitation only. Tuesday, 25 August · online.",
+    "How to Build One Business From Hundreds of Independent Minds. A private online session with Varun Malik — Founder & CEO of Konsälidön. By invitation only. Tuesday, 8 September · online.",
   openGraph: {
-    title: "InvestHack #03 — Julius Bachmann · Legends",
+    title: "InvestHack #03 — Varun Malik · Legends",
     description:
-      "Ownership, Culture and Care: The Capital They Create. A private online session with Julius Bachmann. By invitation only.",
+      "How to Build One Business From Hundreds of Independent Minds. A private online session with Varun Malik. By invitation only.",
   },
 }
 

@@ -21,8 +21,8 @@ const photos = [
 ]
 
 const highlights = [
-  "200+ scale-up lessons distilled into one candid hour",
-  "A closed-room Q&A with Julius, cameras on",
+  "How independent experts become one accountable firm",
+  "A closed-room Q&A with Varun, cameras on",
   "New intros made across the GCC founder network",
 ]
 
@@ -38,10 +38,10 @@ export function PostEventRecap() {
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
             {/* PLACEHOLDER COPY — replace with the real recap */}
-            A full room, cameras on, and an hour of unusually direct conversation. Julius walked us through what really
-            changes when a founder becomes the bottleneck — and the small, human plays that keep a company&apos;s energy
-            up as it scales. Below: the recording, a few moments from the session, and the takeaways people kept quoting
-            afterwards.
+            A full room, cameras on, and an hour of unusually direct conversation. Varun walked us through how a
+            network of independent specialists becomes one firm clients can trust — how that trust is earned, and what
+            gets harder as the network grows. Below: the recording, a few moments from the session, and the takeaways
+            people kept quoting afterwards.
           </p>
         </Reveal>
 
@@ -117,10 +117,11 @@ export function PostEventRecap() {
             <Quote className="h-6 w-6 text-primary" />
             <blockquote className="mt-4 text-pretty text-lg italic leading-relaxed text-foreground">
               {/* PLACEHOLDER QUOTE */}
-              &ldquo;The highest-leverage decisions are the ones you cannot delegate.&rdquo;
+              &ldquo;A client isn&apos;t buying a group of consultants. They&apos;re buying the certainty that someone
+              owns the outcome.&rdquo;
             </blockquote>
             <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">
-              Julius Bachmann
+              Varun Malik
             </p>
           </Reveal>
         </div>
