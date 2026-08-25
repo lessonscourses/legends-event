@@ -102,7 +102,7 @@ export function Hero() {
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
           <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_72%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
-              src="/images/spk_wbp_2.webp"
+              src="/images/varun-malik.webp"
               alt="Varun Malik — Founder and CEO of Konsälidön"
               className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[96%] lg:left-0 lg:-translate-x-[6%]"
             />
