@@ -30,7 +30,7 @@ export function Hero({ postEvent = false }: { postEvent?: boolean }) {
             {/* Eyebrow — series title as the kicker */}
             <span className="block text-[1.35rem] font-extrabold leading-none tracking-tight sm:text-3xl">
               <span className="gold-text">InvestHack</span>{" "}
-              <span className="text-foreground">#02</span>
+              <span className="text-foreground">#03</span>
             </span>
 
             {/* Speaker — the lead-in to the headline: quiet label, bold name */}
@@ -39,19 +39,18 @@ export function Hero({ postEvent = false }: { postEvent?: boolean }) {
                 Meet the Legend
               </span>
               <span className="gold-text text-[1.84rem] font-semibold leading-none tracking-tight sm:text-[2.42rem]">
-                Julius Bachmann
+                Varun Malik
               </span>
             </div>
 
             {/* Event title — the headline */}
             <h1 className="mt-5 text-balance text-[clamp(1.9rem,4.2vw,3.3rem)] font-bold leading-[1.15] tracking-tight">
-              How to Build Ownership Culture{" "}
-              <span className="text-muted-foreground">&amp;</span> Care:
-              Insights from 200+ Scale-Up Companies
+              How to Build One Business From Hundreds of{" "}
+              <span className="text-muted-foreground">Independent Minds?</span>
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
-              The capital they create — a closed session where boardroom
-              strategy and personal leadership meet.
+              The trust that turns independent experts into one firm — a closed
+              session on building a company clients can rely on.
             </p>
 
             {/* Event date + city times */}
@@ -60,7 +59,7 @@ export function Hero({ postEvent = false }: { postEvent?: boolean }) {
                 <div className="inline-flex items-center gap-3">
                   <CalendarDays className="h-7 w-7 shrink-0 text-primary sm:h-9 sm:w-9" />
                   <span className="text-2xl font-bold tracking-tight sm:text-4xl">
-                    Tuesday, 25 August
+                    Tuesday, 8 September
                   </span>
                 </div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
@@ -111,7 +110,7 @@ export function Hero({ postEvent = false }: { postEvent?: boolean }) {
           <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_72%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
               src="/images/speaker-julius.webp"
-              alt="Julius Bachmann — VC, CFO, Founder and musician"
+              alt="Varun Malik — Founder and CEO of Konsälidön"
               className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[96%] lg:left-0 lg:-translate-x-[6%]"
             />
           </div>

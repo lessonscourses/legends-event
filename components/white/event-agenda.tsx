@@ -11,16 +11,16 @@ const agenda = [
   {
     icon: Compass,
     step: "01",
-    title: "The Reflective Operator's Playbook",
-    speaker: "Julius Bachmann, Founder, Bachmann Catalyst",
-    desc: "Why your highest-leverage decisions can't be delegated, what relational responsibility looks like in practice, and how the best CEOs stay human while scaling from 100 to 1,000 people.",
+    title: "Building One Firm From Many Minds",
+    speaker: "Varun Malik, Founder & CEO, Konsälidön",
+    desc: "How independent specialists become one accountable delivery team — winning B2B trust, selecting the right experts, aligning project teams and scaling quality without a large permanent firm behind it.",
   },
   {
     icon: DoorClosed,
     step: "02",
     title: "The Closed Room",
     speaker: "Legends members only",
-    desc: "A small-group conversation with Julius straight after the talk. Real questions, direct answers, and networking with the speaker.",
+    desc: "A small-group conversation with Varun straight after the talk. Real questions, direct answers, and networking with the speaker.",
   },
 ]
 
@@ -34,7 +34,7 @@ export function EventAgenda() {
           {/* Date — the anchor, big and clear */}
           <div className="mt-5 flex items-center gap-3">
             <CalendarDays className="h-8 w-8 shrink-0 text-primary sm:h-10 sm:w-10" />
-            <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August 2026</span>
+            <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 8 September 2026</span>
           </div>
 
           {/* Timezones — clean grid so nothing piles up on mobile */}

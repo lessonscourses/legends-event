@@ -1,17 +1,17 @@
-import { TrendingUp, Users, Crosshair, Music } from "lucide-react"
+import { TrendingUp, Users, Crosshair, Globe } from "lucide-react"
 import { Reveal } from "../reveal"
 
 const traits = [
-  { icon: TrendingUp, label: "Built", desc: "Backed and built companies from seed to scale." },
-  { icon: Users, label: "Transformed", desc: "Moved from corporate structures to creative freedom." },
-  { icon: Crosshair, label: "Advises", desc: "PE/VC partners and CEOs on their hardest calls." },
-  { icon: Music, label: "Inspired", desc: "Music shapes how he thinks, leads and creates." },
+  { icon: TrendingUp, label: "Founded", desc: "Built Konsälidön, a distributed consulting firm." },
+  { icon: Crosshair, label: "Led", desc: "Senior consulting roles at PwC and Protiviti." },
+  { icon: Users, label: "Aligns", desc: "Independent experts into one accountable team." },
+  { icon: Globe, label: "Scales", desc: "Cross-border delivery across the GCC and beyond." },
 ]
 
 const stats = [
-  { value: "200+", label: "Companies financed & advised" },
-  { value: "100 → 1,000", label: "Scaling board experience" },
-  { value: "6,500+", label: "Leaders read Wise Systems" },
+  { value: "PwC · Protiviti", label: "Built consulting practices inside" },
+  { value: "1 firm", label: "From hundreds of independent minds" },
+  { value: "GCC", label: "Distributed delivery, one standard" },
 ]
 
 export function Speaker() {
@@ -25,7 +25,7 @@ export function Speaker() {
           <Reveal className="relative self-start lg:mt-8 lg:-mx-14 lg:w-[calc(100%+7rem)]">
             <img
               src="/images/julius-speaker-quote.webp"
-              alt="Julius Bachmann — “Great companies are not built in comfort. They are built by people who learn faster than the world changes.”"
+              alt="Varun Malik — Founder and CEO of Konsälidön"
               className="w-full object-contain"
             />
             {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
@@ -34,25 +34,26 @@ export function Speaker() {
 
           {/* Bio */}
           <Reveal delay={120} className="flex flex-col justify-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Julius Bachmann</h2>
+            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Varun Malik</h2>
             <p className="mt-3 block text-sm font-medium uppercase tracking-[0.22em] text-primary">
-              Investor · Operator · Founder · Musician
+              Founder &amp; CEO · Konsälidön
             </p>
 
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Before he became the advisor CEOs call in their hardest moments, Julius sat on the other side of the
-              table — first as a PE/VC investor, then as a tech-company CFO. He knows cap tables, boardrooms and the
-              pressure of the numbers from the inside. Over more than a decade he has financed and advised{" "}
-              <span className="text-foreground">200+ companies</span> through their most consequential calls.
+              Varun spent years building consulting practices inside the big names — senior roles at{" "}
+              <span className="text-foreground">PwC and Protiviti</span> — before deciding the model itself could be
+              rebuilt. Instead of another firm carried by overhead and hierarchy, he set out to prove that a network of
+              independent experts could deliver like one accountable company.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              He is also an author and musician. He writes the Wise Systems newsletter — on how we stay human while
-              building what matters — read by 6,500+ leaders, and has published essays in Forbes, Sifted, Capital and
-              Business Insider. He holds an MBA from London Business School.
+              That idea became Konsälidön: a distributed consulting firm where the right specialists are assembled
+              around each client&apos;s problem, aligned into one delivery team, and held to a single standard of
+              quality — without the weight of a large permanent organisation behind them.
             </p>
 
             <blockquote className="mt-8 border-l-2 border-primary pl-5 text-pretty text-lg italic leading-relaxed text-foreground">
-              &ldquo;The highest-leverage decisions are the ones you cannot delegate.&rdquo;
+              &ldquo;A client isn&apos;t buying a group of consultants. They&apos;re buying the certainty that someone
+              owns the outcome.&rdquo;
             </blockquote>
 
             {/* Traits */}

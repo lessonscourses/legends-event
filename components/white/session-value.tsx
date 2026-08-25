@@ -5,27 +5,27 @@ const agenda = [
   {
     icon: Compass,
     step: "01",
-    title: "The Reflective Operator's Playbook",
-    desc: "Why your highest-leverage decisions can't be delegated, what relational responsibility looks like in practice, and how the best CEOs stay human while scaling from 100 to 1,000 people.",
+    title: "The Journey",
+    desc: "From building consulting practices inside PwC and Protiviti to leaving the established structure and putting his own reputation behind a distributed firm — the decisions, doubts and turning points that became a model of his own.",
   },
   {
     icon: Brain,
     step: "02",
     title: "The Hacks",
-    desc: "The personal plays behind better decisions, sharper focus and sustainable high performance — plus the mistakes he's watched founders repeat along the way.",
+    desc: "How to make one company out of people who don't work for one company: winning B2B trust, selecting the right experts, aligning project teams, protecting quality and scaling delivery without losing accountability.",
   },
   {
     icon: DoorClosed,
     step: "03",
     title: "The Closed Room",
-    desc: "Legends members only. A small-group conversation with Julius straight after the talk — real questions, direct answers, and intros with the speaker.",
+    desc: "Legends members only. A small-group chat, Q&A and intros with Varun straight after the talk.",
   },
 ]
 
 const forYou = [
-  "Founders and CEOs carrying decisions they can't delegate",
-  "Operators scaling teams and cultures through real pressure",
-  "Investors and board members who lead both people and capital",
+  "Founders, CEOs and operators scaling companies and teams — asking what needs to change as the business grows",
+  "Investors and leaders drawn to the decisions, trade-offs and personal side of building at scale",
+  "Anyone building a distributed team who wants it to feel as reliable as an established firm",
 ]
 
 const notForYou = ["Anyone looking to pitch the speaker on the call", "Service providers and fund marketers working the room"]
@@ -37,12 +37,13 @@ export function SessionValue() {
         <Reveal className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Why this room</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-            The decisions that move a company are rarely the financial ones.
+            A client isn&apos;t buying a list of consultants. It&apos;s buying certainty someone will own the result.
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-            The way you lead 20 people won&apos;t work with 100 — and what gets you to 100 won&apos;t get you to 1,000.
-            In one focused session, Julius unpacks what changes when the founder becomes the bottleneck, and how care
-            creates energy in an organisation instead of draining it.
+            On paper, distributed consulting sounds simple — find the right experts, gather them around a client&apos;s
+            problem and skip the overhead of a large permanent firm. In reality, that&apos;s where the real business
+            begins. In one focused session, Varun unpacks how independent specialists become one delivery team, how
+            trust is built before the first project starts, and what gets harder as the network expands.
           </p>
         </Reveal>
 
