@@ -10,13 +10,13 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: "InvestHack #03 — Varun Malik · Legends",
+  title: "How to Profit as a Human in an Unforgiving AI World · Legends",
   description:
-    "How to Build One Business From Hundreds of Independent Minds. A private online session with Varun Malik — Founder & CEO of Konsälidön. By invitation only. Tuesday, 8 September · online.",
+    "How to Profit as a Human in an Unforgiving AI World. A private online session with entrepreneur and investor Varun Malik. By invitation only. Tuesday, 8 September · online.",
   openGraph: {
-    title: "InvestHack #03 — Varun Malik · Legends",
+    title: "How to Profit as a Human in an Unforgiving AI World · Legends InvestHack #03",
     description:
-      "How to Build One Business From Hundreds of Independent Minds. A private online session with Varun Malik. By invitation only.",
+      "Where humans can still create value in the age of AI — and what investors should back next. A private online session with Varun Malik.",
   },
 }
 

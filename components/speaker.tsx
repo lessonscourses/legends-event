@@ -5,29 +5,29 @@ const traits = [
   {
     icon: TrendingUp,
     label: "Built",
-    desc: "Founded and scaled a distributed consulting firm from the ground up.",
+    desc: "Companies and consulting practices across several operating models.",
   },
   {
     icon: Users,
     label: "Led",
-    desc: "Established and led Operations Consulting at PwC and Protiviti.",
+    desc: "Consulting practices and projects at PwC, Protiviti and Encreate.",
   },
   {
     icon: Crosshair,
-    label: "Connects",
-    desc: "Pairs organisations with senior independent experts.",
+    label: "Invests",
+    desc: "In media, communities, experiences, training and practical tools.",
   },
   {
     icon: Globe,
-    label: "Expands",
-    desc: "Growing from networks into ecosystems, communities and ventures.",
+    label: "Explores",
+    desc: "Longevity, superintelligence, robotics and converging technologies.",
   },
 ];
 
 const stats = [
-  { value: "~10 yrs", label: "Building & evolving Konsälidön" },
-  { value: "3 firms", label: "Consulting practices built & led" },
-  { value: "1 network", label: "Independent minds, one company" },
+  { value: "PwC · Protiviti", label: "Consulting practices built & led" },
+  { value: "3 steps", label: "Understand · embrace · prepare" },
+  { value: "1 MTP", label: "Powering humanity into an exponential future" },
 ];
 
 export function Speaker() {
@@ -42,8 +42,8 @@ export function Speaker() {
           {/* Portrait quote card — enlarged and lowered so his head lands near the role tags; base fade dissolves the waist crop */}
           <Reveal className="relative self-start lg:mt-24 lg:-mx-8 lg:w-[calc(100%+4rem)]">
             <img
-              src="/images/v-m-quote.png"
-              alt="Varun Malik — Founder and CEO of Konsälidön"
+              src="/images/julius-speaker-quote.webp"
+              alt="Varun Malik — entrepreneur, investor and Founder of Konsälidön"
               className="w-full object-contain"
             />
             {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
@@ -56,29 +56,26 @@ export function Speaker() {
               Varun Malik
             </h2>
             <p className="mt-3 block text-sm font-medium uppercase tracking-[0.22em] text-primary">
-              Founder · CEO · Operator · Ecosystem Builder
+              Entrepreneur · Investor · Founder of Konsälidön
             </p>
 
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Varun Malik is the Founder and CEO of{" "}
-              <span className="text-foreground">Konsälidön</span>, a Dubai-based
-              distributed consulting company connecting organisations with
-              consulting teams and independent senior talent. Before founding
-              it, he established and led an Operations Consulting team at PwC,
-              built a consulting practice at Protiviti and managed operations
-              consulting projects at Encreate Consulting.
+              Varun is an entrepreneur, investor and the Founder of{" "}
+              <span className="text-foreground">Konsälidön</span>. He has built
+              and led consulting practices at PwC, Protiviti and Encreate
+              Consulting, created technology and learning ventures, and spent
+              years developing businesses across different operating models.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              He has also built technology and learning ventures in India.
-              Nearly a decade on, his work is expanding from consulting networks
-              towards a broader model built around ecosystems, communities and
-              long-term collaboration.
+              After stepping back from day-to-day operational roles, his focus
+              shifted towards understanding, preparing for and investing in an
+              exponential future. That thesis now guides micro-investments
+              designed to help leaders understand what is coming, move beyond
+              fear and prepare to act.
             </p>
 
             <blockquote className="mt-8 border-l-2 border-primary pl-5 text-pretty text-lg italic leading-relaxed text-foreground">
-              &ldquo;What comes next will be built on new models — with wider
-              reach, faster sensing, and closer to the people doing the
-              work.&rdquo;
+              &ldquo;Powering humanity into an exponential future.&rdquo;
             </blockquote>
 
             {/* Traits */}
