@@ -42,7 +42,7 @@ export function Speaker() {
           {/* Portrait quote card — enlarged and lowered so his head lands near the role tags; base fade dissolves the waist crop */}
           <Reveal className="relative self-start lg:mt-24 lg:-mx-8 lg:w-[calc(100%+4rem)]">
             <img
-              src="/images/julius-speaker-quote.webp"
+              src="/images/v-m-quote.png"
               alt="Varun Malik — entrepreneur, investor and Founder of Konsälidön"
               className="w-full object-contain"
             />
