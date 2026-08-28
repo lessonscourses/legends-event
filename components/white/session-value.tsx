@@ -6,13 +6,13 @@ const agenda = [
     icon: Compass,
     step: "01",
     title: "The Journey",
-    desc: "From building consulting practices inside PwC and Protiviti to leaving the established structure and putting his own reputation behind a distributed firm — the decisions, doubts and turning points that became a model of his own.",
+    desc: "From building companies and consulting practices to stepping back from daily operations, defining one purpose and turning it into an investment thesis.",
   },
   {
     icon: Brain,
     step: "02",
     title: "The Hacks",
-    desc: "How to make one company out of people who don't work for one company: winning B2B trust, selecting the right experts, aligning project teams, protecting quality and scaling delivery without losing accountability.",
+    desc: "How to understand an exponential future, move beyond fear and invest in the learning, communities, experiences and tools that help people prepare.",
   },
   {
     icon: DoorClosed,
@@ -23,9 +23,9 @@ const agenda = [
 ]
 
 const forYou = [
-  "Founders, CEOs and operators scaling companies and teams — asking what needs to change as the business grows",
-  "Investors and leaders drawn to the decisions, trade-offs and personal side of building at scale",
-  "Anyone building a distributed team who wants it to feel as reliable as an established firm",
+  "Founders, CEOs and operators looking for where human value can still be created as intelligence and execution become abundant",
+  "Investors and family offices deciding which capabilities, communities and tools may remain valuable as technologies converge",
+  "Leaders preparing their companies and capital before the next opportunity becomes obvious to everyone",
 ]
 
 const notForYou = ["Anyone looking to pitch the speaker on the call", "Service providers and fund marketers working the room"]
@@ -37,13 +37,13 @@ export function SessionValue() {
         <Reveal className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Why this room</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-            A client isn&apos;t buying a list of consultants. It&apos;s buying certainty someone will own the result.
+            Where can humans still create — and capture — value when machines can think, decide and work?
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-            On paper, distributed consulting sounds simple — find the right experts, gather them around a client&apos;s
-            problem and skip the overhead of a large permanent firm. In reality, that&apos;s where the real business
-            begins. In one focused session, Varun unpacks how independent specialists become one delivery team, how
-            trust is built before the first project starts, and what gets harder as the network expands.
+            The future is unforgiving not because machines want anything, but because today&apos;s knowledge, skills and
+            business advantages may lose value faster than leaders can adapt. In one focused session, Varun turns his
+            optimism about exponential change into a practical investment sequence: understand what is coming, move
+            beyond fear, and prepare to act.
           </p>
         </Reveal>
 

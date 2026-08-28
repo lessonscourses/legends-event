@@ -11,9 +11,9 @@ const agenda = [
   {
     icon: Compass,
     step: "01",
-    title: "Building One Firm From Many Minds",
-    speaker: "Varun Malik, Founder & CEO, Konsälidön",
-    desc: "How independent specialists become one accountable delivery team — winning B2B trust, selecting the right experts, aligning project teams and scaling quality without a large permanent firm behind it.",
+    title: "The Journey & Investment Thesis",
+    speaker: "Varun Malik · Entrepreneur & Investor",
+    desc: "How a career spent building companies led to one purpose — powering humanity into an exponential future — and a practical filter for what Varun now studies, builds and backs.",
   },
   {
     icon: DoorClosed,
