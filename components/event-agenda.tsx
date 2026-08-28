@@ -11,9 +11,9 @@ const agenda = [
   {
     icon: Compass,
     step: "01",
-    title: "The Journey",
-    speaker: "Varun Malik, Founder & CEO, Konsälidön",
-    desc: "From building consulting practices inside PwC and Protiviti to leaving the established structure and putting his own reputation behind a distributed firm — the decisions, doubts and turning points that became a model of his own.",
+    title: "The Journey & Investment Thesis",
+    speaker: "Varun Malik · Entrepreneur & Investor",
+    desc: "How a career spent building companies led to one purpose — powering humanity into an exponential future — and a practical filter for what Varun now studies, builds and backs.",
   },
   {
     icon: DoorClosed,

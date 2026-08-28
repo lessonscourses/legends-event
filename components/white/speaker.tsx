@@ -2,16 +2,16 @@ import { TrendingUp, Users, Crosshair, Globe } from "lucide-react"
 import { Reveal } from "../reveal"
 
 const traits = [
-  { icon: TrendingUp, label: "Founded", desc: "Built Konsälidön, a distributed consulting firm." },
-  { icon: Crosshair, label: "Led", desc: "Senior consulting roles at PwC and Protiviti." },
-  { icon: Users, label: "Aligns", desc: "Independent experts into one accountable team." },
-  { icon: Globe, label: "Scales", desc: "Cross-border delivery across the GCC and beyond." },
+  { icon: TrendingUp, label: "Built", desc: "Companies and consulting practices across several operating models." },
+  { icon: Users, label: "Led", desc: "Consulting practices and projects at PwC, Protiviti and Encreate." },
+  { icon: Crosshair, label: "Invests", desc: "In media, communities, experiences, training and practical tools." },
+  { icon: Globe, label: "Explores", desc: "Longevity, superintelligence, robotics and converging technologies." },
 ]
 
 const stats = [
-  { value: "PwC · Protiviti", label: "Built consulting practices inside" },
-  { value: "1 firm", label: "From hundreds of independent minds" },
-  { value: "GCC", label: "Distributed delivery, one standard" },
+  { value: "PwC · Protiviti", label: "Consulting practices built & led" },
+  { value: "3 steps", label: "Understand · embrace · prepare" },
+  { value: "1 MTP", label: "Powering humanity into an exponential future" },
 ]
 
 export function Speaker() {
@@ -25,7 +25,7 @@ export function Speaker() {
           <Reveal className="relative self-start lg:mt-8 lg:-mx-14 lg:w-[calc(100%+7rem)]">
             <img
               src="/images/julius-speaker-quote.webp"
-              alt="Varun Malik — Founder and CEO of Konsälidön"
+              alt="Varun Malik — entrepreneur, investor and Founder of Konsälidön"
               className="w-full object-contain"
             />
             {/* Soft base gradient — only the very bottom, so it hides the waist crop without touching the baked-in quote initials */}
@@ -36,24 +36,22 @@ export function Speaker() {
           <Reveal delay={120} className="flex flex-col justify-center">
             <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Varun Malik</h2>
             <p className="mt-3 block text-sm font-medium uppercase tracking-[0.22em] text-primary">
-              Founder &amp; CEO · Konsälidön
+              Entrepreneur · Investor · Founder of Konsälidön
             </p>
 
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Varun spent years building consulting practices inside the big names — senior roles at{" "}
-              <span className="text-foreground">PwC and Protiviti</span> — before deciding the model itself could be
-              rebuilt. Instead of another firm carried by overhead and hierarchy, he set out to prove that a network of
-              independent experts could deliver like one accountable company.
+              Varun is an entrepreneur, investor and the Founder of <span className="text-foreground">Konsälidön</span>.
+              He has built and led consulting practices at PwC, Protiviti and Encreate Consulting, created technology
+              and learning ventures, and spent years developing businesses across different operating models.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              That idea became Konsälidön: a distributed consulting firm where the right specialists are assembled
-              around each client&apos;s problem, aligned into one delivery team, and held to a single standard of
-              quality — without the weight of a large permanent organisation behind them.
+              After stepping back from day-to-day operational roles, his focus shifted towards understanding,
+              preparing for and investing in an exponential future. That thesis now guides micro-investments designed
+              to help leaders understand what is coming, move beyond fear and prepare to act.
             </p>
 
             <blockquote className="mt-8 border-l-2 border-primary pl-5 text-pretty text-lg italic leading-relaxed text-foreground">
-              &ldquo;A client isn&apos;t buying a group of consultants. They&apos;re buying the certainty that someone
-              owns the outcome.&rdquo;
+              &ldquo;Powering humanity into an exponential future.&rdquo;
             </blockquote>
 
             {/* Traits */}

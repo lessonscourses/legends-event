@@ -21,9 +21,9 @@ const photos = [
 ]
 
 const highlights = [
-  "How independent experts become one accountable firm",
-  "A closed-room Q&A with Varun, cameras on",
-  "New intros made across the GCC founder network",
+  "Where human value can still compound as AI capabilities grow",
+  "How Varun turns exponential change into an investment filter",
+  "Why leaders need to understand, embrace and prepare",
 ]
 
 export function PostEventRecap() {
@@ -38,10 +38,9 @@ export function PostEventRecap() {
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
             {/* PLACEHOLDER COPY — replace with the real recap */}
-            A full room, cameras on, and an hour of unusually direct conversation. Varun walked us through how a
-            network of independent specialists becomes one firm clients can trust — how that trust is earned, and what
-            gets harder as the network grows. Below: the recording, a few moments from the session, and the takeaways
-            people kept quoting afterwards.
+            Varun connects an exponential future to a practical investment question: where can humans still create
+            and capture value when intelligence, decisions and execution become abundant? Below, the recording,
+            moments from the closed room and the ideas that shaped the conversation will be added after the session.
           </p>
         </Reveal>
 
@@ -117,8 +116,7 @@ export function PostEventRecap() {
             <Quote className="h-6 w-6 text-primary" />
             <blockquote className="mt-4 text-pretty text-lg italic leading-relaxed text-foreground">
               {/* PLACEHOLDER QUOTE */}
-              &ldquo;A client isn&apos;t buying a group of consultants. They&apos;re buying the certainty that someone
-              owns the outcome.&rdquo;
+              &ldquo;Powering humanity into an exponential future.&rdquo;
             </blockquote>
             <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">
               Varun Malik
