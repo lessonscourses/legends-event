@@ -52,8 +52,9 @@ export function Hero() {
               <span className="text-foreground">Unforgiving AI World</span>
             </h1>
             <p className="mt-4 hidden max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:block sm:text-xl">
-              The AI shift won&apos;t wait for leaders to catch up. Varun on where humans can still create value — and what
-              investors should back next.
+              The AI shift won&apos;t wait for leaders to catch up. Varun on
+              where humans can still create value — and what investors should
+              back next.
             </p>
 
             {/* Event date + city times */}
@@ -102,7 +103,7 @@ export function Hero() {
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
           <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_72%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
-              src="/images/varun-malik.webp"
+              src="/images/v-m-nobg.png"
               alt="Varun Malik — entrepreneur, investor and Founder of Konsälidön"
               className="absolute left-1/2 top-1/2 h-[118%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[96%] lg:left-0 lg:-translate-x-[6%]"
             />
